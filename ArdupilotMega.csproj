@@ -128,10 +128,8 @@
     <Reference Include="alglibnet2">
       <HintPath>Lib\alglibnet2.dll</HintPath>
     </Reference>
-    <Reference Include="AWSSDK, Version=1.5.18.0, Culture=neutral, PublicKeyToken=9f476d3089b52be3, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Amazon Web Services LLC\AWSToolkit.VS2010\AWSSDK.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="AWSSDK">
+      <HintPath>Lib\AWSSDK.dll</HintPath>
     </Reference>
     <Reference Include="DirectShowLib-2005">
       <HintPath>Lib\DirectShowLib-2005.dll</HintPath>
