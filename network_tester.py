@@ -28,6 +28,6 @@ def get_data():
   #print str( milliseconds ) + ":" + f.read( 100 )
   t_delta = t_after - t_before
   #print str( datetime.now() ) + " = "+ str( t_after.microsecond - t_before.microsecond ) + "," + str( t_delta.seconds ) + "." + str( t_delta.microseconds ) + ":" + f.read( 100 )
-  print str( datetime.now() ) + ","+ str( t_delta.seconds ) + "." + str( t_delta.microseconds ) + "," + f.read( 100 )
+  print str( datetime.now() ) + ","+ str( t_delta.seconds ) + "." + str( t_delta.microseconds ) + "," + f.read( 110 )
 
 do_every ( 0.2, get_data );
