@@ -30,4 +30,4 @@ def get_data():
   #print str( datetime.now() ) + " = "+ str( t_after.microsecond - t_before.microsecond ) + "," + str( t_delta.seconds ) + "." + str( t_delta.microseconds ) + ":" + f.read( 100 )
   print str( datetime.now() ) + ","+ str( t_delta.seconds ) + "." + str( t_delta.microseconds ) + "," + f.read( 100 )
 
-do_every ( 0.25, get_data );
+do_every ( 0.2, get_data );
