@@ -2167,6 +2167,27 @@ Server: ubuntu
 
 
             }
+            else if( url.Contains( "/mytest/" ) )
+            {
+                string header = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n";
+                byte[] temp = asciiEncoding.GetBytes(header);
+                stream.Write(temp, 0, temp.Length);
+
+                string data = MainV2.comPort.MAV.cs.datetime.ToString("MM/dd/yyyy hh:mm:ss.fff tt") + "," +
+                              MainV2.comPort.MAV.cs.lat.ToString() + "," +
+                              MainV2.comPort.MAV.cs.lng.ToString() + "," +
+                              MainV2.comPort.MAV.cs.alt.ToString() + "," +
+                              (MainV2.comPort.MAV.cs.alt - MainV2.comPort.MAV.cs.HomeAlt).ToString() + "," +
+                              MainV2.comPort.MAV.cs.yaw.ToString() + "," +
+                              MainV2.comPort.MAV.cs.roll.ToString() + "," +
+                              MainV2.comPort.MAV.cs.pitch.ToString() + "," +
+                              MainV2.comPort.MAV.cs.groundspeed.ToString() + "," +
+                              MainV2.comPort.MAV.cs.satcount.ToString();
+
+                byte[] temp1 = asciiEncoding.GetBytes(data);
+                stream.Write(temp1, 0, temp1.Length);
+                stream.Close();
+            }
             else
             {
                 Console.WriteLine(url);
