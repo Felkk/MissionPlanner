@@ -152,22 +152,12 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>Lib\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-<<<<<<< HEAD
-    <Reference Include="IronPython, Version=2.7.0.40, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="IronPython.Modules, Version=2.7.0.40, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-=======
     <Reference Include="IronPython">
       <HintPath>Lib\IronPython.dll</HintPath>
     </Reference>
     <Reference Include="IronPython.Modules, Version=2.7.0.40, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Lib\IronPython.Modules.dll</HintPath>
->>>>>>> 2a5b829... Get errors about System.IObseravable.
     </Reference>
     <Reference Include="log4net">
       <HintPath>Lib\log4net.dll</HintPath>
@@ -186,29 +176,18 @@
       <HintPath>Lib\Microsoft.DirectX.DirectInput.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Dynamic">
-<<<<<<< HEAD
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Scripting, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-=======
       <HintPath>Lib\Microsoft.Dynamic.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Scripting, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Lib\Microsoft.Scripting.dll</HintPath>
->>>>>>> 2a5b829... Get errors about System.IObseravable.
     </Reference>
     <Reference Include="Microsoft.Scripting.Core">
       <HintPath>Lib\Microsoft.Scripting.Core.dll</HintPath>
     </Reference>
-<<<<<<< HEAD
-=======
     <Reference Include="Microsoft.Scripting.Debugging">
       <HintPath>Lib\Microsoft.Scripting.Debugging.dll</HintPath>
     </Reference>
->>>>>>> 2a5b829... Get errors about System.IObseravable.
     <Reference Include="Microsoft.Scripting.ExtensionAttribute, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Lib\Microsoft.Scripting.ExtensionAttribute.dll</HintPath>
