@@ -522,7 +522,7 @@ namespace ArdupilotMega
             [DisplayText("Guided")]
             GUIDED = 15,
             [DisplayText("TERMINATE")]
-            TERMINATE = 16,
+            TERMINATE = 17,
 
             TAKEOFF = 99
         }
