@@ -6,7 +6,8 @@ using System.ComponentModel;
 using ArdupilotMega.Utilities;
 using log4net;
 using ArdupilotMega.Attributes;
-
+using System.Net;
+using System.Net.Sockets;
 namespace ArdupilotMega
 {
     public class CurrentState : ICloneable
@@ -17,6 +18,8 @@ namespace ArdupilotMega
         internal string DistanceUnit = "";
         public float multiplierspeed = 1;
         internal string SpeedUnit = "";
+
+        private static UdpClient clientSocket;
 
         public double toDistDisplayUnit(double input) { return input * multiplierdist; }
         public double toSpeedDisplayUnit(double input) { return input * multiplierspeed; }
@@ -455,6 +458,12 @@ namespace ArdupilotMega
             ratesensors = 2;
             raterc = 2;
             datetime = DateTime.MinValue;
+
+            if (clientSocket == null)
+            {
+                clientSocket = new UdpClient();
+                clientSocket.Connect(new IPEndPoint(IPAddress.Parse("192.168.15.10"), 8000));
+            }
         }
 
         const float rad2deg = (float)(180 / Math.PI);
@@ -770,7 +779,16 @@ enum gcs_severity {
 
                            // alt = gps.alt; // using vfr as includes baro calc
                         }
-                                        
+
+                        if (clientSocket != null)
+                        {
+                            Object objData = "air " + lat.ToString() + " " + lng.ToString() + " " + alt.ToString();
+                            byte[] byData = System.Text.Encoding.ASCII.GetBytes(objData.ToString());
+                            lock (this)
+                            {
+                                clientSocket.BeginSend(byData, byData.Length, null, null);
+                            }
+                        }
 
                         gpsstatus = gps.fix_type;
                         //                    Console.WriteLine("gpsfix {0}",gpsstatus);
